@@ -26,6 +26,12 @@ make all_r
 
 Dependency management is not fully sorted out under native MacOS.
 
+## Run
+
+```sh
+bin/run.sh
+```
+
 ## Publish
 
 ```sh
