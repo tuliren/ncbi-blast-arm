@@ -20,7 +20,7 @@ WORKDIR "/usr/src/c++/ReleaseMT/build"
 RUN make all_r
 
 # Create a directory to store the binaries
-RUN mkdir /usr/src/binaries
-RUN cd app/blast && cp blastn blastp blastx tblastn tblastx /usr/src/binaries/
+RUN mkdir /usr/bin/blast
+RUN cd app/blast && cp blastn blastp blastx tblastn tblastx /usr/bin/blast
 
 CMD ["bash"]
