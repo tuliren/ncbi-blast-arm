@@ -21,6 +21,10 @@ RUN make all_r
 
 FROM arm64v8/ubuntu:latest as final
 
+RUN apt-get update && apt-get install -y \
+    liblmdb0 \
+    libgomp1
+
 WORKDIR "/usr/bin/blast"
 
 COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastn" .
