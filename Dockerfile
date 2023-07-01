@@ -1,8 +1,7 @@
-FROM arm64v8/ubuntu:latest
+FROM arm64v8/ubuntu:latest as builder
 
 RUN apt-get update && apt-get install -y \
     build-essential \
-    wget \
     gcc-aarch64-linux-gnu \
     g++-aarch64-linux-gnu \
     zlib1g-dev \
@@ -19,8 +18,15 @@ RUN ./configure --build=aarch64-linux
 WORKDIR "/usr/src/c++/ReleaseMT/build"
 RUN make all_r
 
-# Create a directory to store the binaries
-RUN mkdir /usr/bin/blast
-RUN cd app/blast && cp blastn blastp blastx tblastn tblastx /usr/bin/blast
+
+FROM arm64v8/ubuntu:latest as final
+
+WORKDIR "/usr/bin/blast"
+
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastn" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastp" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastx" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/tblastn" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/tblastx" .
 
 CMD ["bash"]
