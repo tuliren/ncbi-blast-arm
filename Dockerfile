@@ -14,7 +14,7 @@ WORKDIR "/usr/src/c++"
 
 # Configure and build NCBI BLAST
 RUN rm -rf ReleaseMT/*
-RUN ./configure --build=arm-linux
+RUN ./configure --build=aarch64-linux
 RUN cd ReleaseMT/build && make all_r
 
 # Create a directory to store the binaries
