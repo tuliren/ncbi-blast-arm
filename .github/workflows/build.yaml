@@ -25,5 +25,5 @@ jobs:
           base_image: arm64v8/ubuntu:latest
           githubToken: ${{ github.token }}
           run: |
-            sudo apt-get update && apt-get install -y docker.io
+            apt-get update && apt-get install -y docker.io
             bin/build.sh
