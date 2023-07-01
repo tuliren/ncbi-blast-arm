@@ -7,24 +7,6 @@ on:
     branches: [ main ]
 
 jobs:
-  build-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - uses: uraimo/run-on-arch-action@v2
-        name: Build docker image
-        id: compile-in-docker
-        with:
-          arch: aarch64
-          distro: ubuntu_latest
-          base_image: arm64v8/ubuntu:latest
-          githubToken: ${{ github.token }}
-          run: |
-            apt-get update && apt-get install -y docker.io
-            bin/build.sh
-
   build-native:
     runs-on: ubuntu-latest
     steps:
