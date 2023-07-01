@@ -7,18 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-docker:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
       - uses: uraimo/run-on-arch-action@v2
         name: Build docker image
-        id: build-docker
+        id: compile-in-docker
         with:
           arch: aarch64
           distro: ubuntu_latest
@@ -27,3 +24,30 @@ jobs:
           run: |
             apt-get update && apt-get install -y docker.io
             bin/build.sh
+
+  build-native:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - uses: uraimo/run-on-arch-action@v2
+        name: Compile
+        id: compile-arm64
+        with:
+          arch: aarch64
+          distro: ubuntu_latest
+          base_image: arm64v8/ubuntu:latest
+          githubToken: ${{ github.token }}
+          run: |
+            apt-get update && apt-get install -y \
+                build-essential \
+                gcc-aarch64-linux-gnu \
+                g++-aarch64-linux-gnu \
+                zlib1g-dev \
+                liblmdb-dev
+            cd c++
+            rm -rf ReleaseMT/*
+            ./configure --build=aarch64-linux
+            cd ReleaseMT/build
+            make all_r
