@@ -17,7 +17,6 @@ RUN rm -rf ReleaseMT/*
 RUN ./configure --build=aarch64-linux
 
 WORKDIR "/usr/src/c++/ReleaseMT/build"
-RUN make datatool
 RUN make all_r
 
 CMD ["bash"]
