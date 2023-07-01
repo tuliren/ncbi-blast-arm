@@ -26,5 +26,12 @@ make all_r
 
 Dependency management is not fully sorted out under native MacOS.
 
+## Publish
+
+```sh
+docker tag ncbi_blast_arm:latest tuliren/ncbi_blast_arm:latest
+docker push tuliren/ncbi_blast_arm:latest
+```
+
 ## License
 The source code belongs to NCBI. See the original [LICENSE](https://github.com/ncbi/ncbi-cxx-toolkit-public/blob/master/doc/public/LICENSE).
