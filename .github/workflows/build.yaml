@@ -22,5 +22,6 @@ jobs:
         with:
           arch: aarch64
           distro: ubuntu_latest
+          base_image: arm64v8/ubuntu:latest
           githubToken: ${{ github.token }}
           run: bin/build.sh
