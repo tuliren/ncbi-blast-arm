@@ -1,0 +1,7 @@
+# $Id: CMakeLists.gbproj.asn.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(gbproj)
+  NCBI_dataspecs(gbproj.asn)
+  NCBI_uses_toolkit_libraries(submit xconnect)
+NCBI_end_lib()
+

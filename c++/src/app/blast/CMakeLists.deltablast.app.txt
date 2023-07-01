@@ -1,0 +1,9 @@
+# $Id: CMakeLists.deltablast.app.txt 622501 2020-12-24 15:12:25Z ivanov $
+
+NCBI_begin_app(deltablast)
+  NCBI_sources(deltablast_app)
+  NCBI_uses_toolkit_libraries(blast_app_util)
+  NCBI_add_definitions(NCBI_MODULE=BLAST)
+  NCBI_requires(-Cygwin)
+NCBI_end_app()
+

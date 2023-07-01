@@ -1,0 +1,5 @@
+# $Id: Makefile.in 597164 2019-11-18 18:14:20Z vasilche $
+SUB_PROJ = primary_track
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

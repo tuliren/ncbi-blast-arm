@@ -1,0 +1,10 @@
+# $Id: Makefile.in 570669 2018-09-12 18:50:11Z foleyjp $
+
+# Meta-makefile (object utilities)
+##################################
+
+LIB_PROJ = logging
+#SUB_PROJ =
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,7 @@
+# $Id: CMakeLists.scoremat.asn.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(scoremat)
+  NCBI_dataspecs(scoremat.asn)
+  NCBI_uses_toolkit_libraries(seqset)
+NCBI_end_lib()
+

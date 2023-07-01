@@ -1,0 +1,50 @@
+#
+# Filename: Manifest
+#
+# $Id: Manifest 638164 2021-09-24 14:36:31Z fukanchi $
+#
+# Author:
+#
+# Purpose: This file holds all the supported configurations of a package
+#          It is used by release configurator.
+#
+
+USE_COMPONENTS
+
+TAG_PRE_COMMIT: tagprecommit/use_embedded_ptb.py
+TAG_PRE_COMMIT: tagprecommit/gen_all.py
+# Each line describes a single configuration
+# The format is as follows:
+# <HardwareIdentifier> : <ReleaseSuffix> : <CompilerConfigurationScriptWithKeys>
+# Configuration script is relative to c++/compilers/unix/ .
+# Release configurator assumes that this script will eventually call standard configure script and pass all options
+# to it. So some standard options may be added by release configurator, such as --build-root-sfx, --with-projects,
+# --with-distcc, --with-action etc.
+
+Win64_17        : MSVC17-64-dll : dll    64 ReleaseDLL
+Win64_17        : MSVC17-64     : static 64 ReleaseMT
+
+Win64_19        : MSVC19-64-dll : dll    64 ReleaseDLL
+Win64_19        : MSVC19-64     : static 64 ReleaseMT
+
+Cygwin64        : GCC       : GCC.sh --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+
+Linux64-Centos  : GCC730    : GCC.sh 7.3.0    --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+Linux64-Centos  : GCC830    : GCC.sh 8.3.0    --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+Linux64-Centos  : GCC910    : GCC.sh 9.1.0    --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+Linux64-Centos  : GCC1020   : GCC.sh 10.2.0   --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+Linux64-Centos  : ICC1903   : ICC.sh 19.0     --without-debug --with-dll --with-mt --with-runpath --without-ncbi-c
+Linux64-Centos  : ICC2120   : ICC.sh 21.0     --with-debug --with-mt --with-3psw=system --with-runpath --without-ncbi-c
+Linux64-Centos  : Clang7    : Clang.sh 7.0.0  --with-debug --with-mt --with-flat-makefile --without-ncbi-c
+#Linux64-Centos  : Clang12   : Clang.sh 12.0.0 --with-debug --with-mt --with-flat-makefile --without-ncbi-c
+
+Linux64-Ubuntu         : plain-GCC : GCC.sh --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+Linux64-Ubuntu-Public  : plain-GCC : GCC.sh --without-debug --with-mt --with-flat-makefile --without-ncbi-c
+
+FreeBSD64              : plain     : Clang.sh --without-debug --with-mt --with-flat-makefile --with-runpath --without-ncbi-c --with-gnutls=/usr/local
+
+IntelMAC               : Debug     : Clang.sh --with-debug    --with-dll --with-mt --with-flat-makefile --without-gcrypt --without-mysql --without-pcre --without-ncbi-c
+IntelMAC               : Release   : Clang.sh --without-debug --with-dll --with-mt --with-flat-makefile --without-gcrypt --without-mysql --without-pcre --without-ncbi-c
+
+XCode                  : plain     : Xcode.sh 30 --without-debug --with-64 --without-ncbi-c
+

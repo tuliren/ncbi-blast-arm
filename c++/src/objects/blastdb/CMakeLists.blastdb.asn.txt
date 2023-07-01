@@ -1,0 +1,8 @@
+# $Id: CMakeLists.blastdb.asn.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(blastdb)
+  NCBI_dataspecs(blastdb.asn)
+  NCBI_uses_toolkit_libraries(xnetblast)
+  NCBI_project_watchers(camacho)
+NCBI_end_lib()
+

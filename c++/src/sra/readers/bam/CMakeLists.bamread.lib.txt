@@ -1,0 +1,9 @@
+# $Id: CMakeLists.bamread.lib.txt 621843 2020-12-17 14:02:27Z ivanov $
+
+NCBI_begin_lib(bamread SHARED)
+  NCBI_sources(bamread bamgraph bgzf bamindex vdbfile)
+  NCBI_add_definitions(NCBI_BAMREAD_EXPORTS)
+  NCBI_uses_toolkit_libraries(seqset xcompress)
+  NCBI_project_watchers(vasilche)
+NCBI_end_lib()
+

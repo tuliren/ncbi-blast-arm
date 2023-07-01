@@ -1,0 +1,8 @@
+# $Id: CMakeLists.entrez2cli.lib.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(entrez2cli)
+  NCBI_generated_sources(entrez2_client.cpp entrez2_client_.cpp)
+  NCBI_uses_toolkit_libraries(entrez2 xconnect)
+  NCBI_project_watchers(lavr)
+NCBI_end_lib()
+

@@ -1,0 +1,62 @@
+# $Id: CMakeLists.txt 638721 2021-10-05 13:41:09Z gouriano $
+
+NCBI_add_subdirectory(
+  access
+  biblio
+  biotree
+  blast
+  blastdb
+  blastxml
+  blastxml2
+  cdd
+  cn3d
+  coords
+  dbsnp
+  docsum
+  entrez2
+  entrezgene
+  featdef
+  gbproj
+  gbseq
+  general
+  genesbyloc
+  genomecoll
+  homologene
+  id1
+  id2
+  insdseq
+  macro
+  medlars
+  medline
+  mim
+  mla
+  mmdb
+  ncbimime
+  objprt
+  omssa
+  pcassay
+  pcassay2
+  pcsubstance
+  proj
+  pub
+  pubmed
+  remap
+  scoremat
+  seq
+  seqcode
+  seqedit
+  seqset
+  seqsplit
+  seqtest
+  submit
+  taxon1
+  taxon3
+  tinyseq
+  trackmgr
+  valerr
+  valid
+  variation
+  variation_libs
+  varrep
+)
+

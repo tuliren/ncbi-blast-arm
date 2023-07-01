@@ -1,0 +1,10 @@
+# $Id: CMakeLists.srareadx.lib.txt 647032 2022-03-18 13:54:22Z vasilche $
+
+NCBI_begin_lib(srareadx)
+  NCBI_sources(
+    snpread_packed
+  )
+  NCBI_uses_toolkit_libraries(sraread xobjmgr)
+  NCBI_project_watchers(vasilche)
+NCBI_end_lib()
+

@@ -1,0 +1,7 @@
+# $Id: CMakeLists.pubmed.asn.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(pubmed)
+  NCBI_dataspecs(pubmed.asn)
+  NCBI_uses_toolkit_libraries(medline)
+NCBI_end_lib()
+

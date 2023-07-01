@@ -1,0 +1,8 @@
+# $Id: CMakeLists.blast_app_util.lib.txt 622501 2020-12-24 15:12:25Z ivanov $
+
+NCBI_begin_lib(blast_app_util)
+  NCBI_sources(blast_app_util)
+  NCBI_uses_toolkit_libraries(blastdb xnetblast blastinput xblastformat)
+  NCBI_add_definitions(NCBI_MODULE=BLAST)
+NCBI_end_lib()
+

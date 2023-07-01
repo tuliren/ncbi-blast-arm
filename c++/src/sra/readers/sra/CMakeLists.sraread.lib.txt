@@ -1,0 +1,12 @@
+# $Id: CMakeLists.sraread.lib.txt 647032 2022-03-18 13:54:22Z vasilche $
+
+NCBI_begin_lib(sraread SHARED)
+  NCBI_sources(
+    sraread vdbread kdbread csraread wgsresolver wgsresolver_impl wgsread
+    graphread snpread
+  )
+  NCBI_add_definitions(NCBI_SRAREAD_EXPORTS)
+  NCBI_uses_toolkit_libraries(seqsplit seqset)
+  NCBI_project_watchers(vasilche)
+NCBI_end_lib()
+

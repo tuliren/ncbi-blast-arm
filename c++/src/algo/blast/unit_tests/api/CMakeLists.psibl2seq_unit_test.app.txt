@@ -1,0 +1,10 @@
+# $Id: CMakeLists.psibl2seq_unit_test.app.txt 621774 2020-12-16 19:29:59Z ivanov $
+
+NCBI_begin_app(psibl2seq_unit_test)
+  NCBI_sources(psibl2seq_unit_test)
+  NCBI_uses_toolkit_libraries(xblast)
+  NCBI_set_test_assets(psibl2seq_unit_test.ini data)
+  NCBI_add_test()
+  NCBI_project_watchers(boratyng madden camacho)
+NCBI_end_app()
+

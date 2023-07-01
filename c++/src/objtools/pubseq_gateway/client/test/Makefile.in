@@ -1,0 +1,6 @@
+# $Id: Makefile.in 576417 2018-12-14 17:02:22Z sadyrovr $
+
+APP_PROJ = test_psg_client_impl
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

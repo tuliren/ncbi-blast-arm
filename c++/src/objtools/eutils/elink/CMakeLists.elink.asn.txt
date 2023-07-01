@@ -1,0 +1,8 @@
+# $Id: CMakeLists.elink.asn.txt 621735 2020-12-16 15:47:41Z ivanov $
+
+NCBI_begin_lib(elink)
+  NCBI_dataspecs(elink.dtd)
+  NCBI_uses_toolkit_libraries(xser)
+  NCBI_project_watchers(grichenk)
+NCBI_end_lib()
+

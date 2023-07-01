@@ -1,0 +1,7 @@
+# $Id: Makefile.in 627169 2021-03-10 15:19:46Z ucko $
+
+LIB_PROJ = dbapi_driver
+SUB_PROJ = util ctlib ftds100 ftds-default mysql odbc samples
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

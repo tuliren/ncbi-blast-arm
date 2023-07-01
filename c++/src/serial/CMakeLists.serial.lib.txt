@@ -1,0 +1,21 @@
+# $Id: CMakeLists.serial.lib.txt 656900 2022-09-29 21:45:59Z fukanchi $
+
+NCBI_begin_lib(xser)
+  NCBI_sources(
+	hookdata hookdatakey typeinfo objectinfo objectiter objectio
+        typeref typemap
+        stdtypes enumerated ptrinfo autoptrinfo continfo stltypes
+	memberid memberlist item classinfob member classinfo
+	variant choice choiceptr aliasinfo
+	objistr objostr objcopy iterator
+	serial delaybuf pack_string
+	exception objhook objlist objstack
+	objostrasn objistrasn objostrasnb objistrasnb objostrxml objistrxml
+	objostrjson objistrjson serializable serialobject pathhook rpcbase
+	${serial_ws50_rtti_kludge}
+  )
+  NCBI_uses_toolkit_libraries(xutil)
+  NCBI_project_watchers(gouriano)
+  NCBI_project_tags(core)
+NCBI_end_lib()
+

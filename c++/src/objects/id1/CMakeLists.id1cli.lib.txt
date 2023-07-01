@@ -1,0 +1,8 @@
+# $Id: CMakeLists.id1cli.lib.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(id1cli)
+  NCBI_generated_sources(id1_client.cpp id1_client_.cpp)
+  NCBI_uses_toolkit_libraries(id1 xconnect)
+  NCBI_project_watchers(vasilche)
+NCBI_end_lib()
+

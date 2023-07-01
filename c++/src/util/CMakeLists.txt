@@ -1,0 +1,20 @@
+# $Id: CMakeLists.txt 622908 2021-01-05 18:13:34Z merezhuk $
+
+NCBI_add_library(util)
+NCBI_add_subdirectory(
+    bitset 
+    regexp 
+    xregexp 
+    compress 
+    diff 
+    image 
+    tables 
+    sequtil 
+    qparse 
+    lmdb 
+    lmdbxx 
+    test 
+    demo
+    profile
+)
+

@@ -1,0 +1,11 @@
+# $Id: CMakeLists.test_jsonwrapp.app.txt 621674 2020-12-15 14:42:44Z ivanov $
+
+NCBI_begin_app(test_jsonwrapp)
+  NCBI_sources(test_jsonwrapp)
+  NCBI_requires(Boost.Test.Included)
+  NCBI_uses_toolkit_libraries(test_boost)
+  NCBI_project_tags(test)
+  NCBI_add_test()
+  NCBI_project_watchers(gouriano)
+NCBI_end_app()
+

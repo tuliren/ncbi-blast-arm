@@ -1,0 +1,9 @@
+#############################################################################
+# $Id: CMakeLists.pcassay2.asn.txt 624526 2021-02-01 12:28:49Z chengt2 $
+#############################################################################
+
+NCBI_begin_lib(pcassay2)
+  NCBI_dataspecs(pcassay2.asn)
+  NCBI_uses_toolkit_libraries(seq pcsubstance)
+NCBI_end_lib()
+

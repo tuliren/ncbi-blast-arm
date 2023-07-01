@@ -1,0 +1,5 @@
+# $Id: Makefile.efetch.lib.unix 650149 2022-05-17 20:57:34Z ucko $
+
+ifeq "$(OSTYPE)" "cygwin"
+  efetch___.o: CXXFLAGS = -O $(ORIG_CXXFLAGS)
+endif

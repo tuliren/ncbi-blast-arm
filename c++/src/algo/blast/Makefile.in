@@ -1,0 +1,12 @@
+# $Id: Makefile.in 633891 2021-06-28 18:06:13Z fongah2 $
+
+# Meta-makefile ("BLAST" project)
+#################################
+
+SUB_PROJ = composition_adjustment core dbindex dbindex_search api proteinkmer \
+           format blastinput blast_sra_input igblast gumbel_params vdb unit_tests
+
+WATCHERS = camacho madden fongah2
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

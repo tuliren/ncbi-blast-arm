@@ -1,0 +1,7 @@
+# $Id: CMakeLists.remap.asn.txt 621673 2020-12-15 14:41:24Z ivanov $
+
+NCBI_begin_lib(remap)
+  NCBI_dataspecs(remap.asn)
+  NCBI_uses_toolkit_libraries(seq)
+NCBI_end_lib()
+

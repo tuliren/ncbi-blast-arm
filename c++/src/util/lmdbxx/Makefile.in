@@ -1,0 +1,8 @@
+# $Id: Makefile.in 593139 2019-09-12 17:29:30Z ivanov $
+
+REQUIRES = LMDB
+
+APP_PROJ = lmdbxx_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

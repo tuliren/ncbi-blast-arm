@@ -1,0 +1,13 @@
+# $Id: CMakeLists.gene_info_unit_test.app.txt 621735 2020-12-16 15:47:41Z ivanov $
+
+NCBI_begin_app(gene_info_unit_test)
+  NCBI_sources(gene_info_test)
+  NCBI_uses_toolkit_libraries(gene_info)
+
+  NCBI_set_test_assets(data)
+  NCBI_set_test_requires(Linux)
+  NCBI_add_test()
+
+  NCBI_project_watchers(madden camacho)
+NCBI_end_app()
+

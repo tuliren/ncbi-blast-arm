@@ -1,0 +1,9 @@
+# $Id: CMakeLists.psiblast.app.txt 622501 2020-12-24 15:12:25Z ivanov $
+
+NCBI_begin_app(psiblast)
+  NCBI_sources(psiblast_app)
+  NCBI_add_definitions(NCBI_MODULE=BLAST)
+  NCBI_uses_toolkit_libraries(blast_app_util)
+  NCBI_requires(-Cygwin)
+NCBI_end_app()
+

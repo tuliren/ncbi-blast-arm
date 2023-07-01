@@ -1,0 +1,9 @@
+# $Id: Makefile.in 622628 2020-12-29 15:14:57Z merezhuk $
+
+LIB_PROJ = utrtprof
+SUB_PROJ =
+PROJ_TAG = core
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

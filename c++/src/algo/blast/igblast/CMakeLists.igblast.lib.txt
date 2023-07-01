@@ -1,0 +1,10 @@
+# $Id: CMakeLists.igblast.lib.txt 621774 2020-12-16 19:29:59Z ivanov $
+
+NCBI_begin_lib(igblast)
+  NCBI_sources(igblast)
+  NCBI_uses_toolkit_libraries(
+    xalnmgr xblast
+  )
+  NCBI_project_watchers(madden camacho)
+NCBI_end_lib()
+

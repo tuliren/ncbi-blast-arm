@@ -1,0 +1,10 @@
+# $Id: Makefile.in 597580 2019-11-22 23:33:17Z vakatov $
+
+PROTOBUF_PROJ = dbsnp
+LIB_PROJ = 
+SUB_PROJ = test
+
+REQUIRES = $(GRPC_OPT)
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

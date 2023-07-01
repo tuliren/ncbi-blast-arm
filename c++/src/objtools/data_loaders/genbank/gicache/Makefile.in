@@ -1,0 +1,8 @@
+# $Id: Makefile.in 511920 2016-08-25 17:29:10Z ucko $
+
+LIB_PROJ = ncbi_xreader_gicache
+
+REQUIRES = LMDB
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

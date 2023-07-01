@@ -1,0 +1,8 @@
+# $Id: CMakeLists.xalgosegmask.lib.txt 621774 2020-12-16 19:29:59Z ivanov $
+
+NCBI_begin_lib(xalgosegmask)
+  NCBI_sources(segmask)
+  NCBI_uses_toolkit_libraries(blast xobjmgr seqset)
+  NCBI_project_watchers(blastsoft)
+NCBI_end_lib()
+

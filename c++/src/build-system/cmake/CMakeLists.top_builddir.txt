@@ -1,0 +1,32 @@
+#############################################################################
+# $Id: CMakeLists.top_builddir.txt 640794 2021-11-18 13:21:54Z gouriano $
+#############################################################################
+##############################################################################
+
+set(NCBI_PTBCFG_KNOWN_FOLDERS
+  dll
+  corelib
+  util
+  connect
+  cgi
+  html
+  build-system
+  serial
+  db
+  dbapi
+  objects
+  objmgr
+  objtools
+  ctools
+  algo
+  misc
+  sra
+  app
+  sample
+  gui
+
+  ${NCBI_PTBCFG_KNOWN_FOLDERS}
+)
+
+include(${CMAKE_CURRENT_LIST_DIR}/CMake.NCBItoolkit.cmake)
+NCBI_add_subdirectory( ${NCBI_PTBCFG_KNOWN_FOLDERS})

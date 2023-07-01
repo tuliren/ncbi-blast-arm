@@ -1,0 +1,9 @@
+# $Id: CMakeLists.taxon3.asn.txt 638239 2021-09-27 13:27:59Z gotvyans $
+
+NCBI_begin_lib(taxon3)
+  NCBI_dataspecs(taxon3.asn)
+  NCBI_sources(taxon3)
+  NCBI_uses_toolkit_libraries(seq xconnect)
+  NCBI_project_watchers(stakhovv holmesbr)
+NCBI_end_lib()
+

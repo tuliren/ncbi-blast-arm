@@ -1,0 +1,9 @@
+# $Id: CMakeLists.logging.lib.txt 621735 2020-12-16 15:47:41Z ivanov $
+
+NCBI_begin_lib(xlogging)
+  NCBI_sources(
+    message listener
+  )
+  NCBI_uses_toolkit_libraries(xncbi)
+  NCBI_project_watchers(foleyjp)
+NCBI_end_lib()

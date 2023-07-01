@@ -1,0 +1,8 @@
+# $Id: CMakeLists.blastdb_path.app.txt 622501 2020-12-24 15:12:25Z ivanov $
+
+NCBI_begin_app(blastdb_path)
+  NCBI_sources(blastdb_path)
+  NCBI_add_definitions(NCBI_MODULE=BLASTDB)
+  NCBI_uses_toolkit_libraries(blastdb_format blastinput)
+  NCBI_project_watchers(camacho fongah2)
+NCBI_end_app()

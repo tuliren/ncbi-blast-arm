@@ -1,0 +1,8 @@
+# $Id: Makefile.seq.lib.unix 635371 2021-08-02 18:37:24Z ucko $
+ifeq "$(COMPILER)-$(DEBUG_SFX)$(DLL)" "icc-Release"
+ ifneq "" "$(filter -static-intel,$(DLL_LDFLAGS))"
+  seqfeat__.o: seqfeat__.cpp
+	$(CXX_WRAPPER) $(CXX) $(CXXFLAGS_ALL) \
+	    -fno-builtin-strcpy -fno-builtin-strspn $< -o $@ $(CXX_FILTER)
+ endif
+endif

@@ -1,0 +1,10 @@
+# $Id: CMakeLists.lmdbxx_sample.app.txt 621427 2020-12-11 14:26:55Z ivanov $
+
+NCBI_begin_app(lmdbxx_sample)
+  NCBI_sources(example.cpp)
+  NCBI_add_include_directories(${includedir}/util/lmdbxx)
+  NCBI_uses_external_libraries(${CMAKE_THREAD_LIBS_INIT})
+  NCBI_project_tags(demo)
+  NCBI_project_watchers(ivanov)
+NCBI_end_app()
+

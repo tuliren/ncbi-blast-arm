@@ -1,0 +1,6 @@
+# $Id: Makefile.in 392169 2013-03-13 21:23:46Z vasilche $
+
+EXPENDABLE_APP_PROJ = test_vdbgraph_loader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

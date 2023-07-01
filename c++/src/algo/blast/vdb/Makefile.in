@@ -1,0 +1,8 @@
+# $Id: Makefile.in 633848 2021-06-28 14:46:45Z fongah2 $
+
+LIB_PROJ = vdb2blast
+
+REQUIRES = VDB
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

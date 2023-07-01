@@ -1,0 +1,9 @@
+# $Id: CMakeLists.ncbi_xblobstorage_netcache.lib.txt 621390 2020-12-10 18:54:37Z ivanov $
+
+NCBI_begin_lib(ncbi_xblobstorage_netcache SHARED)
+  NCBI_sources(blob_storage_netcache)
+  NCBI_add_definitions(NCBI_BLOBSTORAGE_NETCACHE_EXPORTS)
+  NCBI_uses_toolkit_libraries(xconnserv)
+  NCBI_project_watchers(sadyrovr)
+NCBI_end_lib()
+

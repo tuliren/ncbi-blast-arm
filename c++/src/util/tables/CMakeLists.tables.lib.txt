@@ -1,0 +1,7 @@
+# $Id: CMakeLists.tables.lib.txt 621427 2020-12-11 14:26:55Z ivanov $
+
+NCBI_begin_lib(tables)
+  NCBI_sources(raw_scoremat)
+  NCBI_project_watchers(ucko)
+NCBI_end_lib()
+

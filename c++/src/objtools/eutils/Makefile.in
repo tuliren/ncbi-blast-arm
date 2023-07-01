@@ -1,0 +1,10 @@
+# $Id: Makefile.in 645585 2022-02-17 19:42:49Z gouriano $
+
+# Meta-makefile("eutils" project)
+#################################
+
+SUB_PROJ = egquery elink epost esearch espell esummary linkout einfo uilist \
+           ehistory efetch api
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

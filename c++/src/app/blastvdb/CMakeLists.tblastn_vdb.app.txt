@@ -1,0 +1,9 @@
+#############################################################################
+# $Id: CMakeLists.tblastn_vdb.app.txt 634798 2021-07-19 21:23:18Z fongah2 $
+#############################################################################
+
+NCBI_begin_app(tblastn_vdb)
+  NCBI_sources(blast_vdb_app_util tblastn_vdb)
+  NCBI_uses_toolkit_libraries(vdb2blast ncbi_xloader_csra ncbi_xloader_wgs blast_app_util)
+  NCBI_requires(VDB)
+NCBI_end_app()

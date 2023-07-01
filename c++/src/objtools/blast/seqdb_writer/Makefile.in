@@ -1,0 +1,10 @@
+# $Id: Makefile.in 535575 2017-05-10 10:14:35Z camacho $
+
+# Meta-makefile("WRITEDB" project)
+#################################
+
+LIB_PROJ = writedb
+SUB_PROJ = unit_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

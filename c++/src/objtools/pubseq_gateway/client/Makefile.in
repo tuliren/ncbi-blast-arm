@@ -1,0 +1,8 @@
+# $Id: Makefile.in 556408 2018-01-30 19:37:55Z sadyrovr $
+
+LIB_PROJ = psg_client
+
+SUB_PROJ = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta
