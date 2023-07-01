@@ -1,10 +1,10 @@
-FROM arm32v7/ubuntu:latest
+FROM arm64v8/ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
-    gcc-arm-linux-gnueabihf \
-    g++-arm-linux-gnueabihf \
+    gcc-aarch64-linux-gnu \
+    g++-aarch64-linux-gnu \
     zlib1g-dev \
     liblmdb-dev
 
