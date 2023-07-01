@@ -16,10 +16,11 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build Docker image
-        uses: docker/build-push-action@v4
+      - uses: uraimo/run-on-arch-action@v2
+        name: Build docker image
+        id: build-docker
         with:
-          context: .
-          file: ./Dockerfile
-          platforms: linux/arm64
-          load: true
+          arch: aarch64
+          distro: ubuntu_latest
+          githubToken: ${{ github.token }}
+          run: bin/build.sh
