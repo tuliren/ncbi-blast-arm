@@ -17,8 +17,4 @@ RUN rm -rf ReleaseMT/*
 RUN ./configure --build=aarch64-linux
 RUN cd ReleaseMT/build && make all_r
 
-# Create a directory to store the binaries
-RUN mkdir /usr/src/binaries
-RUN cp ReleaseMT/build/bin/* /usr/src/binaries/
-
 CMD ["bash"]
