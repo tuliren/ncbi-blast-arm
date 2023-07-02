@@ -32,5 +32,7 @@ COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastp" .
 COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/blastx" .
 COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/tblastn" .
 COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blast/tblastx" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blastdb/blastdbcmd" .
+COPY --from=builder "/usr/src/c++/ReleaseMT/build/app/blastdb/makeblastdb" .
 
 CMD ["bash"]
